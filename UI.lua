@@ -172,7 +172,7 @@ function Library:CreateMain()
 		wait(0.5)
 		MainFrame:TweenSize(UDim2.new(0,0,0,0), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.5, false)
 		wait(0.5)
-		script.Parent:Destroy()
+		AlaskaUI:Destroy()
 	end)
 	
 	local function Dragger(Frame)
@@ -1071,7 +1071,7 @@ function Library:CreateMain()
 			Underline.Position = UDim2.new(0.5, 0, 0.899999976, 0)
 			Underline.Size = UDim2.new(0, 0, 0, 1)	
 			
-			Underline.Size = UDim2.new(0,script.Parent.SectionText.TextBounds.X + 10, 0, 1)
+			Underline.Size = UDim2.new(0,SectionText.TextBounds.X + 10, 0, 1)
 		end
 		
 		function Items:Label(Text, Color)
