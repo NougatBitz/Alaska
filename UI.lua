@@ -30,7 +30,8 @@ function Library:CreateMain()
 	local LayoutThing = Instance.new("UIListLayout")
 	
 	AlaskaUI.Name = "AlaskaUI"
-	AlaskaUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	AlaskaUI.Parent = game.CoreGui
+    AlaskaUI.ResetOnSpawn = false
 	
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = AlaskaUI
@@ -126,11 +127,11 @@ function Library:CreateMain()
 	SplitLine_2.Size = UDim2.new(0, 1, 0, 27)
 	
 	MainFrame.MouseEnter:Connect(function()
-		MainFrame.Logo.Title:TweenSize(UDim2.new(0,200,0,41),Enum.EasingDirection.In, Enum.EasingStyle.Quad, .2, true)	
+		Title:TweenSize(UDim2.new(0,200,0,41),Enum.EasingDirection.In, Enum.EasingStyle.Quad, .2, true)	
 	end)
 	
 	MainFrame.MouseLeave:Connect(function()
-		MainFrame.Logo.Title:TweenSize(UDim2.new(0,0,0,41),Enum.EasingDirection.In, Enum.EasingStyle.Quad, .2, true)	
+		Title:TweenSize(UDim2.new(0,0,0,41),Enum.EasingDirection.In, Enum.EasingStyle.Quad, .2, true)	
 	end)
 	MainFrame.CloseButton.MouseEnter:Connect(function()
 		game.TweenService:Create(MainFrame.CloseButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextColor3 = Color3.fromRGB(255, 64, 0)}):Play()
@@ -141,7 +142,7 @@ function Library:CreateMain()
 	
 	spawn(function()
 		while wait(1) do 
-			MainFrame.Logo.Title.Text = "  Alaska V1 | " .. ReturnTime()
+			Title.Text = "  Alaska V1 | " .. ReturnTime()
 		end	
 	end)
 	
@@ -475,7 +476,7 @@ function Library:CreateMain()
 			
 			local UserInputService = game:GetService("UserInputService")
 			OpenDropdown.MouseButton1Down:Connect(function()
-				if game.Players.LocalPlayer.PlayerGui:FindFirstChild("ChoosingUI") then return end
+				if game.CoreGuii:FindFirstChild("ChoosingUI") then return end
 				game.TweenService:Create(OpenDropdown, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextSize  = 14}):Play()
 				local ConnectionClose
 				
@@ -487,7 +488,7 @@ function Library:CreateMain()
 				local DropItemPadding = Instance.new("UIPadding")
 				
 				ChoosingUI.Name = "ChoosingUI"
-				ChoosingUI.Parent = game.Players.LocalPlayer.PlayerGui
+				ChoosingUI.Parent = game.CoreGui
 				ChoosingUI.ResetOnSpawn = false
 				
 				ChooseDropdownUI.Name = "ChooseDropdownUI"
