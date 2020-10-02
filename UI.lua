@@ -133,11 +133,11 @@ function Library:CreateMain()
 	MainFrame.MouseLeave:Connect(function()
 		Title:TweenSize(UDim2.new(0,0,0,41),Enum.EasingDirection.In, Enum.EasingStyle.Quad, .2, true)	
 	end)
-	MainFrame.CloseButton.MouseEnter:Connect(function()
-		game.TweenService:Create(MainFrame.CloseButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextColor3 = Color3.fromRGB(255, 64, 0)}):Play()
+	CloseButton.MouseEnter:Connect(function()
+		game.TweenService:Create(CloseButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextColor3 = Color3.fromRGB(255, 64, 0)}):Play()
 	end)
-	MainFrame.CloseButton.MouseLeave:Connect(function()
-		game.TweenService:Create(MainFrame.CloseButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+	CloseButton.MouseLeave:Connect(function()
+		game.TweenService:Create(CloseButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
 	end)
 	
 	spawn(function()
@@ -146,7 +146,7 @@ function Library:CreateMain()
 		end	
 	end)
 	
-	MainFrame.CloseButton.MouseButton1Down:Connect(function()
+	CloseButton.MouseButton1Down:Connect(function()
 		for i,v in pairs(TabHolders:GetChildren()) do 
 			v:Destroy()
 		end
@@ -165,11 +165,11 @@ function Library:CreateMain()
 			end
 		end
 		wait(1)
-		game.TweenService:Create(MainFrame.CloseButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextColor3 = Color3.fromRGB(255, 64, 0)}):Play()
+		game.TweenService:Create(CloseButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextColor3 = Color3.fromRGB(255, 64, 0)}):Play()
 		wait(0.2)
 		MainFrame:TweenSize(UDim2.new(0,65,0,65), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.5, false)
 		wait(1)
-		game.TweenService:Create(MainFrame.Logo, TweenInfo.new(0.5, Enum.EasingStyle.Quad), {ImageTransparency = 1}):Play()
+		game.TweenService:Create(Logo, TweenInfo.new(0.5, Enum.EasingStyle.Quad), {ImageTransparency = 1}):Play()
 		wait(0.5)
 		MainFrame:TweenSize(UDim2.new(0,0,0,0), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.5, false)
 		wait(0.5)
