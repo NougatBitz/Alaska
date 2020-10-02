@@ -295,7 +295,7 @@ function Library:CreateMain()
 		ButtonText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		ButtonText.BackgroundTransparency = 1.000
 		ButtonText.Position = UDim2.new(0.470833331, 0, 0.5, 0)
-		ButtonText.Size = UDim2.new(0, 150, 0, 27)
+		ButtonText.Size = UDim2.new(0, 100, 0, 27)
 		ButtonText.Font = Enum.Font.Gotham
 		ButtonText.Text = Name
 		ButtonText.TextColor3 = Color3.fromRGB(255, 255, 255)
