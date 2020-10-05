@@ -1100,6 +1100,13 @@ function Library:CreateMain()
 			LabelText.TextSize = 14.000
 			LabelText.TextWrapped = true
 			LabelText.TextXAlignment = Enum.TextXAlignment.Left
+
+			local ChangeLib = {}
+
+			function ChangeLib:Color(c) LabelText.TextColor3 = c end
+			function ChangeLib:Text(t) LabelText.Text = t end
+
+			return ChangeLib
 		end
 		return Items
 	end
