@@ -1105,7 +1105,8 @@ function Library:CreateMain()
 
 			function ChangeLib:Color(c) LabelText.TextColor3 = c end
 			function ChangeLib:Text(t) LabelText.Text = t end
-
+			function ChangeLib:Destroy() LabelFrame:Destroy() end
+			
 			return ChangeLib
 		end
 		return Items
