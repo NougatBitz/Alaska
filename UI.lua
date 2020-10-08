@@ -343,8 +343,14 @@ function Library:CreateMain()
 		end)
 		
 		local Items = {}
-		
+		local CurrentCanvasSize = ItemHolder.CanvasSize
+		function UpdateCanvas()
+			ItemHolder.CanvasSize = UDim2.new(0,0,0,CurrentCanvasSize + 35)
+			CurrentCanvasSize = ItemHolder.CanvasSize
+		end
+
 		function Items:Button(Text, CallbackF)
+			UpdateCanvas()
 			local ButtonFrame = Instance.new("Frame")
 			local Callback = Instance.new("TextButton")
 			local CallbackRounding = Instance.new("ImageLabel")
@@ -656,6 +662,7 @@ function Library:CreateMain()
 		end
 		
 		function Items:Slider(Text, minAmmount, maxAmmount, CallbackF)
+			UpdateCanvas()
 			local UserInputService = game:GetService("UserInputService")
 			local SliderHolder = Instance.new("Frame")
 			local SliderText = Instance.new("TextLabel")
@@ -858,6 +865,7 @@ function Library:CreateMain()
 		end
 		
 		function Items:TextBox(Text, CallbackF)
+			UpdateCanvas()	
 			local TextBoxFrame = Instance.new("Frame")
 			local TextBoxText = Instance.new("TextLabel")
 			local TextBox = Instance.new("TextBox")
@@ -934,6 +942,7 @@ function Library:CreateMain()
 		end    
 		
 		function Items:Toggle(Text, CallbackF)
+			UpdateCanvas()	
 			local ToggleFrame = Instance.new("Frame")
 			local Toggle = Instance.new("TextButton")
 			local ToggleOutline = Instance.new("ImageLabel")
@@ -1039,6 +1048,7 @@ function Library:CreateMain()
 		end
 		
 		function Items:Section(Text)
+			UpdateCanvas()	
 			local SectionFrame = Instance.new("Frame")
 			local SectionText = Instance.new("TextLabel")
 			local Underline = Instance.new("Frame")
@@ -1076,6 +1086,7 @@ function Library:CreateMain()
 		end
 		
 		function Items:Label(Text, Color)
+			UpdateCanvas()	
 			local LabelFrame = Instance.new("Frame")
 			local LabelText = Instance.new("TextLabel")
 			
