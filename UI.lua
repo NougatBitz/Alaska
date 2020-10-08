@@ -345,7 +345,7 @@ function Library:CreateMain()
 		local Items = {}
 		local CurrentCanvasSize = ItemHolder.CanvasSize
 		function UpdateCanvas()
-			ItemHolder.CanvasSize = UDim2.new(0,0,0,CurrentCanvasSize + 35)
+			ItemHolder.CanvasSize = UDim2.new(0,0,0,CurrentCanvasSize.Y.Offset + 35)
 			CurrentCanvasSize = ItemHolder.CanvasSize
 		end
 
