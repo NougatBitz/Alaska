@@ -1085,7 +1085,7 @@ function Library:CreateMain()
 			Underline.Size = UDim2.new(0,SectionText.TextBounds.X + 10, 0, 1)
 		end
 		
-		function Items:Label(Text, Color)
+		function Items:Label(Text, Color, Name)
 			UpdateCanvas()	
 			local LabelFrame = Instance.new("Frame")
 			local LabelText = Instance.new("TextLabel")
@@ -1117,6 +1117,7 @@ function Library:CreateMain()
 			function ChangeLib:Color(c) LabelText.TextColor3 = c end
 			function ChangeLib:Text(t) LabelText.Text = t end
 			function ChangeLib:Destroy() LabelFrame:Destroy() end
+			function ChangeLib:GetName() return Name end
 			
 			return ChangeLib
 		end
