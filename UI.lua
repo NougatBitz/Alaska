@@ -482,7 +482,7 @@ function Library:CreateMain()
 			
 			local UserInputService = game:GetService("UserInputService")
 			OpenDropdown.MouseButton1Down:Connect(function()
-				if game.CoreGuii:FindFirstChild("ChoosingUI") then return end
+				if game.CoreGui:FindFirstChild("ChoosingUI") then return end
 				game.TweenService:Create(OpenDropdown, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextSize  = 14}):Play()
 				local ConnectionClose
 				
