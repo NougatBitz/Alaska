@@ -345,7 +345,7 @@ function Library:CreateMain()
 		local Items = {}
 		local CurrentCanvasSize = ItemHolder.CanvasSize
 		function UpdateCanvas()
-			ItemHolder.CanvasSize = UDim2.new(0,0,0,CurrentCanvasSize.Y.Offset + 50)
+			ItemHolder.CanvasSize = UDim2.new(0,0,0,CurrentCanvasSize.Y.Offset + 35)
 			CurrentCanvasSize = ItemHolder.CanvasSize
 		end
 
@@ -422,6 +422,7 @@ function Library:CreateMain()
 		end
 		
 		function Items:Dropdown(Text, Items, CallbackF)
+			UpdateCanvas()
 			local DropdownFrame = Instance.new("Frame")
 			local OpenDropdown = Instance.new("TextButton")
 			local OpenDropdownRounding = Instance.new("ImageLabel")
