@@ -139,7 +139,7 @@ function Library:CreateMain()
 	CloseButton.MouseLeave:Connect(function()
 		game.TweenService:Create(CloseButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
 	end)
-	game:GetService("UserInputService").InputBegan:Connect(function()
+	game:GetService("UserInputService").InputBegan:Connect(function(key)
 		if key.KeyCode == Enum.KeyCode.RightControl then 
 			MainFrame.Visible = not MainFrame.Visible
 		end
