@@ -626,9 +626,13 @@ function Library:CreateMain()
 					ItemCallbackText.ZIndex = 302 + c
 					ItemCallbackText.Font = Enum.Font.Gotham
 					ItemCallbackText.Text = tostring(v)
+					ItemCallbackText.TextSca
 					ItemCallbackText.TextColor3 = Color3.fromRGB(255, 255, 255)
 					ItemCallbackText.TextSize = 14.000
 					ItemCallbackText.TextWrapped = true	
+					if ItemCallbackText.TextFits == false then 
+						ItemCallbackText.TextScaled = true
+					end
 				end
 				ChooseDropdownUI:TweenSize(UDim2.new(0,195,0,252), Enum.EasingDirection.In, Enum.EasingStyle.Quad, 0.2, true)
 				wait(0.2)
@@ -1123,7 +1127,7 @@ function Library:CreateMain()
 			function ChangeLib:Color(c) LabelText.TextColor3 = c end
 			function ChangeLib:Text(t) LabelText.Text = t end
 			function ChangeLib:Destroy() LabelFrame:Destroy() end
-			function ChangeLib:GetName() return Name end
+			function ChangeLib:GetText() return Name end
 			
 			return ChangeLib
 		end
