@@ -626,11 +626,11 @@ function Library:CreateMain()
 					ItemCallbackText.ZIndex = 302 + c
 					ItemCallbackText.Font = Enum.Font.Gotham
 					ItemCallbackText.Text = tostring(v)
-					ItemCallbackText.TextSca
 					ItemCallbackText.TextColor3 = Color3.fromRGB(255, 255, 255)
 					ItemCallbackText.TextSize = 14.000
 					ItemCallbackText.TextWrapped = true	
-					if ItemCallbackText.TextFits == false then 
+					
+                    if ItemCallbackText.TextFits == false then 
 						ItemCallbackText.TextScaled = true
 					end
 				end
