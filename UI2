@@ -917,8 +917,8 @@ local defaults; do
                 input = game:GetService('UserInputService').InputBegan:connect(function(a)
                     if a.UserInputType == Enum.UserInputType.MouseButton1 and (not isInGui(container)) then
                         check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').TextColor3 = library.options.textcolor
-                        if location[flag] then
-                            check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').Text       = location[flag];
+                        if location and flag and location[flag] then
+                            check:FindFirstChild('dropdown_lbl'):WaitForChild('Selection').Text = location[flag];
                         end
                         container:TweenSize(UDim2.new(1, 0, 0, 0), 'In', 'Quint', .3, true)
                         wait(0.15)
