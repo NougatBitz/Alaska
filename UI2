@@ -979,8 +979,8 @@ local defaults; do
         font           = Enum.Font.Ubuntu;
         titlefont      = Enum.Font.Ubuntu;
 
-        fontsize       = 16;
-        titlesize      = 18;
+        fontsize       = 14;
+        titlesize      = 16;
 
         textstroke     = 1;
         titlestroke    = 1;
